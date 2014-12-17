@@ -108,7 +108,7 @@ app.post('/delete', function (req, res) {
     query.equalTo("sid", sid);
     query.first({
         success: function (result) {
-            if (result.get('pwd') === req.body.pwd) {
+            if (result && result.get('pwd') === req.body.pwd) {
                 result.destroy({
                     success: function () {
                         res.render('message', {message: '消息已删除'});
@@ -133,7 +133,7 @@ app.post('/show', function (req, res) {
     query.equalTo("sid", sid);
     query.first({
         success: function (result) {
-            if (result.get('pwd') === req.body.pwd) {
+            if (result && result.get('pwd') === req.body.pwd) {
                 res.render('show', {message: result.get('content'), sid: sid});
             } else {
                 res.render('message', {message: '消息已自动删除或密码错误'});
