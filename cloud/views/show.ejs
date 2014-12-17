@@ -1,0 +1,18 @@
+<% include header %>
+<article>
+    <h2>你的好友发给你的消息：</h2>
+    <p><%= message %></p>
+</article>
+<article>
+    <h2>接下来，你可以：</h2>
+    <p>1.等待该消息之后自动删除</p>
+    <p>2.或是输入密码，点击按键立即删除消息</p>
+</article>
+<form action="/delete" method="post">
+    <input placeholder="输入密码" id="pwd" name="pwd" type="password"/>
+    <input id="sid" name="sid" type="hidden" value="<%= sid %>"/>
+    <footer>
+        <button type="submit" class="btn">删除消息</button>
+    </footer>
+</form>
+<% include footer %>
