@@ -21,7 +21,7 @@ yik
 - 网址： https://yik.me
 - 微信公众号: 一刻  yik_15
 
-![一刻](https://mp.weixin.qq.com/misc/getqrcode?fakeid=3016159873&token=10962574&style=1)
+![一刻](https://raw.githubusercontent.com/icyflash/yik/master/public/image/qrcode.jpg)
 
 ### 鸣谢
 
